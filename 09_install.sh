@@ -11,7 +11,7 @@
 
 #if root access then proceed other wise stop it and ask them to run with root access 
 
-dnf install mysql -y
+#dnf install mysql -y
 
 #now check id 
 
@@ -19,7 +19,7 @@ dnf install mysql -y
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0]; then
+if [ $USERID -ne 0 ]; then
    echo "Error:: Please run the script with root privelage"
 fi 
 
@@ -29,4 +29,4 @@ if [ $? -ne 0 ]; then
     echo "Error:: Installing MySQL Failure "
 else
     echo "Installing MySql is Success"
-
+fi
